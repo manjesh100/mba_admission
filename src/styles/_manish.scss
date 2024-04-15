@@ -1,0 +1,298 @@
+.blogMenuContainer {
+    width: 100%;
+    @include setFlexProperty(flex, space-between, center, row);
+    border-bottom: 1px solid #C0C0C0;
+    padding-bottom: 14px;
+    position: relative;
+    li{
+        @include setFontStyle($InterFont, 22px, 600, 22px);
+        color: #000000;
+        opacity: 0.7;
+        position: relative;
+        cursor: pointer;
+        padding-left: 20px;
+        padding-right: 20px;
+        &.active, &:hover {
+            opacity: 1;
+        }
+        &.active{
+            position: relative;
+            &::after {
+                @include setAfterProperty(absolute, auto, -18px, 0, auto, 100%, 8px, #E95C40, "");
+                border-radius: 8px;
+                transform: scaleX(1);
+            }
+        }
+        &::after {
+            @include setAfterProperty(absolute, auto, -18px, 0, auto, 0, 8px, transparent, "");
+            border-radius: 8px;
+            transition: transform 300ms ease-in-out;
+            transform: scaleX(0);
+        }
+    }
+    li:hover::after {
+        @include setDimensionStyle(100%, auto);
+        background-color: #E95C40;
+        transform: scaleX(1);
+    }
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+.mb-100{
+    margin-bottom: 100px;
+}
+
+.blogListContainer{
+    @include setDimensionStyle(100%, auto);
+    .blogBox{
+        @include setDimensionStyle(100%, auto);
+        .blogCategoryHeadingContainer{
+            @include setFlexProperty(flex, space-between, center, row);
+            .mt-0{
+                margin-top: 0px !important;
+            }
+            .blogCategoryHeading{
+                @include setFontStyle($InterFont, 2.2rem, 600, 43.57px);
+                color: #222222;
+            }
+        }
+
+        .blogCardContainer{
+            cursor: pointer;
+            position: relative;
+            .thumbImage{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                img{
+                    z-index: 999;
+                    position: relative;
+                }
+            }
+            .blogCardImage{
+                border-radius: 20px;
+                overflow: hidden;
+                img{
+                    @include setDimensionStyle(100%, auto);
+                    transition: transform .6s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .blogCardDate{
+                margin-top: 30px;
+                @include setFontStyle($InterFont, 18px, 400, 21.78px);
+            }
+            .blogCardTitle{
+                @include setFontStyle($InterFont, 22px, 600, 33.89px);
+                margin-top: 15px;
+                margin-bottom: 30px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .blogCardTags{
+                span.tags{
+                    background-color: #FFCB35;
+                    border-radius: 23px;
+                    height: 32px;
+                    line-height: 32px;
+                    padding: 5px 12px;
+                    @include setFontStyle($InterFont, 18px, 400, 21.78px);
+                }
+            }
+        }
+    }
+}
+
+.blogDetailsContainer{
+    margin-bottom: 70px;
+    .blogUserDetails{
+        margin: 50px 0 20px;
+        @include setFlexProperty(flex, space-between, center, row);
+        .blogUser{
+            @include setFlexProperty(flex, flex-start, center, row);
+            .blogUserImage{
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    object-fit: cover;
+                }
+            }
+            .blogUserName{
+                @include setFontStyle($InterFont, 18px, 400, 21.78px);
+                color: #000000;
+                margin-left: 15px;
+            }
+        }
+        .blogPostTime{
+            @include setFontStyle($InterFont, 18px, 400, 21.78px);
+            color: #999999;
+        }
+    }
+    .blogBanner{
+        @include setDimensionStyle(100%, auto);
+        img{
+            @include setDimensionStyle(100%, auto);
+            object-fit: cover;
+        }
+    }
+
+    .blogDescriptions{
+        margin-top: 50px;
+        padding: 0 119px;
+        .blogTitle{
+            @include setFontStyle($InterFont, 36px, 600, 43.57px);
+            margin-bottom: 20px;
+        }
+        .blogReadTiming{
+            @include setFontStyle($InterFont, 14px, 600, 43.57px);
+            margin-bottom: 30px;
+            color: #999999;
+        }
+        .blogContent{
+            color: #404040;
+            p{
+                margin-bottom: 30px;
+                strong{
+                    @include setFontStyle($InterFont, 28px, 500, 33.89px);
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+.likeArticleContainer{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 150px;
+    .lightLabel{
+        @include setFontStyle($InterFont, 14px, 400, 16.94px);
+        color: #999999;
+        margin-bottom: 20px;
+    }
+    .likeButtonContainer{
+        @include setFlexProperty(flex, center, center, row);
+        .roundBorderButton{
+            cursor: pointer;
+            padding: 19px 54px 19px 54px;
+            border-radius: 100px;
+            @include setFlexProperty(flex, center, center, row);
+            margin: 0 15px;
+            @include setFontStyle($InterFont, 18px, 700, 21.78px);
+            img{
+                @include setDimensionStyle(25px, auto);
+                margin-left: 15px;
+            }
+        }
+        .redButton{
+            border: 1px solid #8D000E;
+            color : #8D000E;
+        }
+        .orangeButton{
+            border: 1px solid #E95C40;
+            color : #E95C40;
+        }
+    }
+}
+
+.serviceTitle{
+    @include setFontStyle($InterFont, 36px, 600, 43.57px);
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 150px;
+    color: #222222;
+}
+
+.serviceListBox {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    @include setDimensionStyle(100%, 250px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0));
+    @include setFlexProperty(flex, center, center, row);
+    text-align: center;
+}
+
+.image {
+    @include setDimensionStyle(100%, auto);
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.serviceListBox:hover .image {
+    transform: scale(1.1);
+}
+
+.serviceLisName {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    @include setFontStyle($InterFont, 28px, 700, 33.89px);
+    color: #FFFFFF;
+    width: 100%;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.successImageBox{
+    @include setDimensionStyle(100%, auto);
+    border-radius: 20px;
+    overflow: hidden;
+    img{
+        @include setDimensionStyle(100%, auto);
+    }
+}
+.successStoryContainer{
+    padding: 15px;
+    @include setFontStyle($InterFont, 18px, 400, 21.78px);
+    .successStoryDate{
+        color: #999999;
+    }
+    .successStoryTitle{
+        @include setFontStyle($InterFont, 28px, 500, 33.89px);
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    .successStoryTags{
+        span.tags{
+            padding: 5px 12px 5px 12px;
+            background-color: #FFCB35;
+            border-radius: 23px;
+            margin-right: 12px;
+        }
+    }
+    .successStoryContent{
+        margin-top: 30px;
+    }
+    .successUserContainer{
+        @include setFlexProperty(flex, flex-start, center, row);
+        margin-top: 30px;
+        .successUserImage{
+            @include setDimensionStyle(42px, 42px);
+            border-radius: 100%;
+            overflow: hidden;
+            margin-right: 10px;
+            img{
+                @include setDimensionStyle(100%, auto);
+                object-fit: cover;
+            }
+        }
+    }
+}

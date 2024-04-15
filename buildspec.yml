@@ -1,0 +1,33 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+  pre_build:
+    commands:
+      - echo "Setting ENV VARS for $environment environment"
+      - sh deploy_scripts/pre_build.sh
+  build:
+    commands:
+      - ls -a
+      # - cat .env 
+      - echo "Installing npm"
+      - npm install
+      - echo "Building Edplatza-App-$environment"
+      # - build_var="$([ "$environment" = "dev" ] && echo "local" || echo "$environment")"
+      # - npm run build:$build_var
+      - npm run build
+  post_build:
+    commands:
+      - echo "Sync to S3 Bucket & Cloudfront Invalidation"
+      - sh deploy_scripts/post_build.sh
+
+artifacts:
+  files:
+    - '**/*'
+env:
+  variables:
+    AWS_DEFAULT_REGION: "ap-south-1"
+cache:
+  paths:
+    - 'node_modules/**/*'

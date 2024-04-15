@@ -1,0 +1,52 @@
+@import "./variable";
+@mixin headerButton {
+  display: flex;
+  font-family: $poppinsFont;
+  padding: 7px 25px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 400;
+}
+@mixin sectionTitle {
+  font-family: $InterFont;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin btnAnimation {
+  transition: all ease-in-out 300ms;
+}
+
+@mixin setDimensionStyle($width, $height){
+  width: $width;
+  $height: $height;
+}
+
+@mixin setFontStyle($fontFamily: $InterFont, $fontSize, $fontWeight: 400, $lineHeight: 20px, $fontStyle: normal) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin setFlexProperty($display, $justifyContent, $placeItems, $flexDirection: row){
+  display: $display;
+  justify-content: $justifyContent;
+  place-items: $placeItems;
+  flex-direction: $flexDirection;
+}
+
+@mixin setAfterProperty($position, $top, $bottom, $left, $right, $width, $height, $bgColor, $content: '""'){
+  content: $content;
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  width: $width;
+  height: $height;
+  background-color: $bgColor;
+}

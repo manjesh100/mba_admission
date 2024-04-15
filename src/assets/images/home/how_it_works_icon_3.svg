@@ -1,0 +1,10 @@
+<svg width="73" height="60" viewBox="0 0 73 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="messages">
+<g id="Group">
+<path id="Vector" d="M64.5 2H8.5C4.63401 2 1.5 5.58172 1.5 10V50C1.5 54.4183 4.63401 58 8.5 58H64.5C68.366 58 71.5 54.4183 71.5 50V10C71.5 5.58172 68.366 2 64.5 2Z" stroke="#E95C40" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Subtract" opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M71.5 14L36 32L1.5 13.5V50C1.5 54.4183 4.63401 58 8.5 58H64.5C68.366 58 71.5 54.4183 71.5 50V14Z" fill="#E95C40"/>
+<path id="Vector_2" d="M1.5 13.6797L30.865 30.1197C33.84 31.9997 37.62 32.0397 40.63 30.1997L71.5 13.6797" stroke="#E95C40" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+<path id="Vector_3" d="M29.605 14.0801L34.575 17.4401C35.765 18.2401 37.2 18.2401 38.39 17.4401L43.36 14.0801" stroke="#E95C40" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+</svg>
