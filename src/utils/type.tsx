@@ -92,3 +92,18 @@ export type TContactQuery = {
     phone: number | null,
     message: string,
 }
+export type TOnboardingStepOne = {
+    selectedOption: string,
+    ourSelf:string,
+    experience:number|null
+    location:string,
+    educational :string,
+    languages:string,
+    introImage:string,
+
+
+
+
+}
+
+

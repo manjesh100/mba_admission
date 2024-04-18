@@ -10,6 +10,7 @@ export const API_ENDPOINT = {
     RESEND_OTP: '/app/auth/resend-temp-otp',
     FORGOT_PASSWORD: '/app/auth/forgot-password',
     RESET_PASSWORD: '/app/auth/reset-password',
+    ONBOARDING_STEP_ONE: '/app/auth/seller-onboarding-one',
   },
   COMMON: {
     FAQ: '/app/master/faq-category-list?page=1',
@@ -22,5 +23,6 @@ export const API_ENDPOINT = {
     SCHOOL_LIST: '/app/school/list?page=1&limit=100',
     CONTACT_DETAILS: '/app/contact/details',
     CONTACT_QUERY: '/common/query/save',
+    LANGUAGE_LIST: '/app/master/language-list',
   },
 };

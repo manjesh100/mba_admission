@@ -1,0 +1,17 @@
+export const constantsKey = {
+  SUCCESS_CODE: "00000",
+  UNAUTHORIZED: "000UN",
+  SUCCESS_STATUS_CODE: 200,
+  SUCCESS_MESSAGE_CODE: 201,
+  INVALID_TOKEN: "000UN",
+  ACCESS_TOKEN: "accessToken",
+  USER_NAME: "userName",
+  SIGNUP_ACCESS_TOKEN: "signupAccessToken",
+  REFRESH_TOKEN: "refreshToken",
+  DEFAULT_COUNTRY_CODE: "+91",
+  LOGIN_SUCCESS: "loginSuccess",
+  RECR_LOGIN_SUCCESS: "recrLoginSuccess",
+  CLIENT_SECRET: "2e96383c2a070ee7b69e2ebb8ecda002",
+  TEXT_BOX_MAX_LENGTH: 100,
+  SUCCESS: "success",
+};
