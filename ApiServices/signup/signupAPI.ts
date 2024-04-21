@@ -33,7 +33,7 @@ export const signupAPI = createApi({
           }
         }
       }
-    }),
+    }),   
     resendOtp: builder.mutation<any, void>({
       query: () => {
         return {
